@@ -70,7 +70,8 @@ When adding a highlighted item, include a short action label in-angle-brackets n
     - Blogs: external links to blogs/newsletters/resources
     - Papers: external links to paper platforms (alphaXiv/arXiv/OpenReview/etc), not random resources
     - Videos: external links to videos (YouTube, etc)
-    - Code: external links to code/tools (GitHub, MCP, HuggingFace tooling, etc)
+    - Code: external links to GitHub repos (GitHub links are Code)
+    - Note: tools/services like Weights & Biases (wandb) and VastAI are treated as Blogs (resources), not Code
   - When restructuring MOCs, keep sub-items attached to their parent top-level item; only bin top-level items
   - When a zettel exists for a concept, ensure the MOC has a checked link entry: `- [x] [[<zettel>|<Concept>]]`
   - If a concept is missing from the MOC, add it and check it once the zettel is created
