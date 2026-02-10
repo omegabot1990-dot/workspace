@@ -1,2 +1,8 @@
 # Local Obsidian vault lives here but is a separate repo
 vault/
+
+# OS
+.DS_Store
+
+# Obsidian plugins (keep vault minimal)
+.obsidian/plugins/
