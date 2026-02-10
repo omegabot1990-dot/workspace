@@ -33,13 +33,15 @@ When creating a new inbox item:
 - Zettel: use `008 - templates/node - zettel.md`
 - MOC: use `008 - templates/node - moc.md`
 - Graph invariant: every new MOC/Zettel must link to a **parent** MOC or Zettel.
+- Root parent: `[[research.base]]` is the root parent for the research graph.
 
 ## Recursive learning workflow
 
 - Start from a **paper**.
 - Breadth-first pass (assistant):
-  - Extract candidate concepts.
-  - If a concept note does not exist yet in `002 - research/`, create it as a zettel and link it to an appropriate parent.
+  1) Create **one zettel per paper**.
+  2) Create an **MOC for the concepts in the paper**.
+  3) BFS concept capture: if a concept note does not exist yet in `002 - research/`, create it as a zettel and link it to an appropriate parent.
 - Depth-first pass (Batman):
   - Deep study, expansion, derivations, refinements.
 
