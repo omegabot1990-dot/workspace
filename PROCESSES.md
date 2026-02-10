@@ -65,7 +65,10 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 Discord execution contract
 
 - These commands will be sent via Discord
-- On receiving a command
+- Workflow trigger channel: `#task` (channel id: 1470908056677388492)
+  - Only run `math` / `note` / `paper` workflows when the command is posted in `#task`
+  - In other channels, treat messages as general chat (no workflow execution)
+- On receiving a command in `#task`
   - Run the corresponding workflow exactly as specified in this file
   - Update vault + parent MOC, then commit + push
   - Reply in Discord with either `Success` or `Failure`
