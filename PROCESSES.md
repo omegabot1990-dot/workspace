@@ -183,6 +183,20 @@ Parent normalization:
 - Depth-first pass (Batman):
   - Deep study, expansion, derivations, refinements.
 
+## Daily newsletter (HF papers trending)
+
+- Schedule: daily at 02:00 Europe/Amsterdam
+- Source: https://huggingface.co/papers/trending
+- Filter: include papers related to Batman interests (maintained in memory; will expand over time)
+- Outputs
+  - Update daily note: `vault/000 - daily notes/YYYY-MM-DD.md`
+    - `## Latest papers` contains arXiv links + short summary per paper
+    - `## TLDR top papers` contains a ranked TLDR list with explicit paper references
+  - Send TLDR to Discord channel `#news-letter` in guild `omega`
+- Implementation
+  - Script: `vault/scripts/hf_trending_newsletter.py`
+  - Cron job runs: pull latest vault, run script, commit + push vault, send script TLDR output to Discord
+
 ## Backups
 
 - Workspace backup trigger: user says "backup the workspace" → commit + push workspace Markdown files.
