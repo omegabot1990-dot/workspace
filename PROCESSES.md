@@ -65,11 +65,13 @@ When adding a highlighted item, include a short action label in-angle-brackets n
     - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
 - MOC: use `008 - templates/node - moc.md`
   - Batman owns/creates MOCs (assistant should not create MOCs)
-  - MOC sections (always in this order): `## Topics`, `## Blogs`, `## Papers`, `## Videos`
-    - Topics: checklist of concepts (no external links)
+  - MOC sections (always in this order): `## Topics`, `## Blogs`, `## Papers`, `## Videos`, `## Code`
+    - Topics: checklist of concepts (typically no external links)
     - Blogs: external links to blogs/newsletters/resources
-    - Papers: external links to paper platforms (alphaXiv/arXiv/OpenReview/etc)
+    - Papers: external links to paper platforms (alphaXiv/arXiv/OpenReview/etc), not random resources
     - Videos: external links to videos (YouTube, etc)
+    - Code: external links to code/tools (GitHub, MCP, HuggingFace tooling, etc)
+  - When restructuring MOCs, keep sub-items attached to their parent top-level item; only bin top-level items
   - When a zettel exists for a concept, ensure the MOC has a checked link entry: `- [x] [[<zettel>|<Concept>]]`
   - If a concept is missing from the MOC, add it and check it once the zettel is created
 - Graph invariant: every new MOC/Zettel must link to a **parent** MOC or Zettel.
