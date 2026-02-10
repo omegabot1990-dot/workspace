@@ -194,8 +194,8 @@ Parent normalization:
     - `## TLDR top papers` contains a ranked TLDR list with explicit paper references
   - Send TLDR to Discord channel `#news-letter` in guild `omega`
 - Implementation
-  - Script: `vault/scripts/hf_trending_newsletter.py`
-  - Cron job runs: pull latest vault, run script, commit + push vault, send script TLDR output to Discord
+  - Script (workspace): `workspace/scripts/hf_trending_newsletter.py`
+  - Cron job runs: pull latest vault, run script with `--vault <path>`, commit + push vault, send script TLDR output to Discord
 
 ## Backups
 
