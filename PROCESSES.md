@@ -74,6 +74,7 @@ Interpretation:
 - `title` in frontmatter: lowercase
 - `aliases`: appropriate casing (e.g. Title Case)
 - Writing style: bullet lists, concise, no trailing full stops
+- Avoid meta-commentary like “in this vault” inside zettel content
 - Do not add highlights or citations
 - Use Obsidian LaTeX for math: inline `$...$`, display `$$...$$`
 - Add a `[!MATH]` callout only when there is actual math (definition/formula)
