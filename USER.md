@@ -2,11 +2,11 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** Batman
+- **What to call them:** Dark Knight (or DN)
 - **Pronouns:** _(optional)_
 - **Timezone:** Europe/Amsterdam (Netherlands)
-- **Notes:**
+- **Notes:** Prefers hybrid answers: concise by default unless they ask for an explanation.
 
 ## Context
 
