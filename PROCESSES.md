@@ -28,6 +28,20 @@ When creating a new inbox item:
   - `importance level`: important | not important
   - `parent nodes`: link to a parent MOC/Zettel
 
+## Highlighting / priority markers
+
+Use Obsidian HTML `<mark style="background: ...;">...</mark>` highlights (not `==...==`).
+
+Priority / urgency color scheme:
+- High + Urgent: `<mark style="background: #FF5582A6;">Deep Work / Peak Flow</mark>`
+- High + Not urgent: `<mark style="background: #ADCCFFA6;">Strategic Planning</mark>`
+- Medium + Urgent: `<mark style="background: #FFB86CA6;">AI Co-Pilot / Sprint</mark>`
+- Medium + Not urgent: `<mark style="background: #D2B3FFA6;">Curate & Stack</mark>`
+- Low + Urgent: `<mark style="background: #BBFABBA6;">AI Auto-Pilot / Time-Box</mark>`
+- Low + Not urgent: plain text `Archive / Backlog`.
+
+When adding a highlighted item, include a short action label in-angle-brackets next to it, e.g. `<important>`, `<do later>`, `<quick read>`, `<skim>`, `<watch>`, based on context.
+
 ## Creating zettels / MOCs
 
 - Zettel: use `008 - templates/node - zettel.md`
