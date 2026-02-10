@@ -78,6 +78,7 @@ Interpretation:
 - Do not add highlights or citations
 - Use Obsidian LaTeX for math: inline `$...$`, display `$$...$$`
 - Add a `[!MATH]` callout only when there is actual math (definition/formula)
+  - Callout should be fully defined (Mean-style): short title, one-line explanation, then LaTeX in `$$...$$`
 
 #### Note zettels
 
