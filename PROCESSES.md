@@ -147,13 +147,8 @@ Interpretation:
 
 #### Trusted sources (default)
 
-- StatQuest
-- 3Blue1Brown
-- Stanford notes
-- Textbooks
-- arXiv survey papers
-- Emergent Mind
-- D2L
+- Source of truth: `vault/002 - research/trusted sources.md`
+- Use the list in `[[trusted sources]]` when verifying `note` and `math` zettels
 - MOC: use `008 - templates/node - moc.md`
   - Batman owns/creates MOCs (assistant should not create MOCs)
   - MOC sections (always in this order): `## Topics`, `## Blogs`, `## Papers`, `## Videos`, `## Code`

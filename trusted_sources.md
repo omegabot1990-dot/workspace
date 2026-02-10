@@ -1,11 +1,8 @@
 # Trusted sources (default)
 
-Batman’s default trusted sources for verifying note/math zettels (can be extended later):
+Source of truth is the vault note:
 
-- StatQuest
-- 3Blue1Brown
-- Stanford notes
-- Textbooks
-- arXiv survey papers
-- Emergent Mind
-- D2L
+- `vault/002 - research/trusted sources.md`
+- `[[trusted sources]]`
+
+When verifying note/math zettels, use that note
