@@ -62,6 +62,16 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 - `note -p <parent> -t <topic>`
 - `paper -p <parent> -t <paper link>`
 
+Discord execution contract
+
+- These commands will be sent via Discord
+- On receiving a command
+  - Run the corresponding workflow exactly as specified in this file
+  - Update vault + parent MOC, then commit + push
+  - Reply in Discord with either `Success` or `Failure`
+    - Include a short reason on failure (what blocked)
+    - On success include the created/updated note path(s) and the vault commit hash
+
 Interpretation:
 - `math`: math concept zettel (math-only framing)
 - `note`: non-math conceptual zettel
