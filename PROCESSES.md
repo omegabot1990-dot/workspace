@@ -49,8 +49,13 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - `paper` = summary of a paper.
   - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels.
   - `code` / `math` = zettels with their own paradigms (Batman will specify).
+  - Writing style: avoid full stops at the end of bullet lines (match existing vault style)
+  - Timestamp rule: generate zettel filenames using **Europe/Amsterdam** local time (DST-aware), format `YYYYMMDDHHMM - <title>.md`
+    - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
 - MOC: use `008 - templates/node - moc.md`
-  - High-level concept map that mainly links to zettels; minimal/no content.
+  - High-level concept map that mainly links to zettels; minimal/no content
+  - When a zettel exists for a concept, ensure the MOC has a checked link entry: `- [x] [[<zettel>|<Concept>]]`
+  - If a concept is missing from the MOC, add it and check it once the zettel is created
 - Graph invariant: every new MOC/Zettel must link to a **parent** MOC or Zettel.
 - Root parent: `[[research.base]]` is the root parent for the research graph.
 
