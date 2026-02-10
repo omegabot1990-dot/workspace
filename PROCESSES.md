@@ -56,16 +56,16 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 
 ### Zettel workflows (robust spec)
 
-### Creation commands (draft standard)
+### Creation commands (standard)
 
-- `note <parent> <topic name>`
-- `math <parent> <topic name>`
-- `paper <parent> <alphaXiv link>`
+- `math -p <parent> -t <topic>`
+- `note -p <parent> -t <topic>`
+- `paper -p <parent> -t <paper link>`
 
 Interpretation:
+- `math`: math concept zettel (math-only framing)
 - `note`: non-math conceptual zettel
-- `math`: math concept zettel (use math-only framing)
-- `paper`: paper zettel sourced from alphaXiv blog
+- `paper`: paper zettel sourced from alphaXiv blog (`-t` is the alphaXiv link)
 
 #### Global zettel rules (all kinds)
 
