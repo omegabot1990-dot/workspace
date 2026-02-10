@@ -52,7 +52,8 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels
   - `code` / `math` = zettels with their own paradigms (Batman will specify)
   - Assistant output requirements for zettels:
-    - Very concise summary in simple words + a `[!MATH]` block when relevant
+    - Very concise summary in simple words
+    - Add a `[!MATH]` block only when there is actual math (definition/formula)
     - Do **not** add highlights (Batman adds highlights during learning)
     - Do **not** add citation/source links (Batman adds them during learning)
     - Only ensure the zettel is linked from the relevant MOC; Batman will create additional mappings between zettels
