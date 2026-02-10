@@ -147,8 +147,11 @@ Interpretation:
 
 #### Trusted sources (default)
 
-- Source of truth: `vault/002 - research/trusted sources.md`
-- Use the list in `[[trusted sources]]` when verifying `note` and `math` zettels
+- Source of truth: `vault/002 - research/trusted sources.md` (`[[trusted sources]]`)
+- Before any `note` or `math` zettel review/creation
+  - Pull latest vault
+  - Read `[[trusted sources]]` and use it as the only trusted-source allowlist
+- Batman may update this note over time; always treat the vault version as authoritative
 - MOC: use `008 - templates/node - moc.md`
   - Batman owns/creates MOCs (assistant should not create MOCs)
   - MOC sections (always in this order): `## Topics`, `## Blogs`, `## Papers`, `## Videos`, `## Code`
