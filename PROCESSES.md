@@ -64,7 +64,7 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - Timestamp rule: generate zettel filenames using **Europe/Amsterdam** local time (DST-aware), format `YYYYMMDDHHMM - <title>.md`
     - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
 - MOC: use `008 - templates/node - moc.md`
-  - Set `bot: true` if created by the assistant
+  - Batman owns/creates MOCs (assistant should not create MOCs)
   - High-level concept map that mainly links to zettels; minimal/no content
   - When a zettel exists for a concept, ensure the MOC has a checked link entry: `- [x] [[<zettel>|<Concept>]]`
   - If a concept is missing from the MOC, add it and check it once the zettel is created
