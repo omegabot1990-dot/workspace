@@ -17,6 +17,7 @@ This file defines the operating workflow for this OpenClaw instance.
 ## Creating inbox items
 
 When creating a new inbox item:
+- Set `bot: true` if created by the assistant
 
 - Location: `vault/001 - inbox/`
 - Template: `008 - templates/node - inbox.md`
@@ -47,6 +48,7 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 ## Creating zettels / MOCs
 
 - Zettel: use `008 - templates/node - zettel.md`
+  - Set `bot: true` if created by the assistant
   - Timestamped zettels are used for: `paper | note | code | math`
   - `paper` = summary of a paper
   - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels
@@ -61,6 +63,7 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - Timestamp rule: generate zettel filenames using **Europe/Amsterdam** local time (DST-aware), format `YYYYMMDDHHMM - <title>.md`
     - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
 - MOC: use `008 - templates/node - moc.md`
+  - Set `bot: true` if created by the assistant
   - High-level concept map that mainly links to zettels; minimal/no content
   - When a zettel exists for a concept, ensure the MOC has a checked link entry: `- [x] [[<zettel>|<Concept>]]`
   - If a concept is missing from the MOC, add it and check it once the zettel is created
