@@ -56,6 +56,17 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 
 ### Zettel workflows (robust spec)
 
+### Creation commands (draft standard)
+
+- `note <parent> <topic name>`
+- `math <parent> <topic name>`
+- `paper <parent> <alphaXiv link>`
+
+Interpretation:
+- `note`: non-math conceptual zettel
+- `math`: math concept zettel (use math-only framing)
+- `paper`: paper zettel sourced from alphaXiv blog
+
 #### Global zettel rules (all kinds)
 
 - Filename timestamp: Europe/Amsterdam local time (DST-aware), `YYYYMMDDHHMM - <topic>.md`
@@ -67,8 +78,15 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 - Use Obsidian LaTeX for math: inline `$...$`, display `$$...$$`
 - Add a `[!MATH]` callout only when there is actual math (definition/formula)
 
-#### Note + Math zettels
+#### Note zettels
 
+- Use when the topic is not primarily mathematical
+- Research step: web search topic and verify against trusted sources (see list below)
+- Output: very concise summary in simple words, but correct technical jargon
+
+#### Math zettels
+
+- Use when the topic is mathematical (keep it purely mathematical; avoid ML/application framing)
 - Research step: web search topic and verify against trusted sources (see list below)
 - Output: very concise summary in simple words, but correct technical jargon
 
