@@ -32,6 +32,8 @@ When creating a new inbox item:
 
 Use Obsidian HTML `<mark style="background: ...;">...</mark>` highlights (not `==...==`).
 
+Note: Batman applies highlights during study; assistant should not add highlights to newly created zettels unless explicitly asked.
+
 Priority / urgency color scheme:
 - High + Urgent: `<mark style="background: #FF5582A6;">Deep Work / Peak Flow</mark>`
 - High + Not urgent: `<mark style="background: #ADCCFFA6;">Strategic Planning</mark>`
@@ -45,11 +47,16 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 ## Creating zettels / MOCs
 
 - Zettel: use `008 - templates/node - zettel.md`
-  - Timestamped zettels are used for: `paper | note | code | math`.
-  - `paper` = summary of a paper.
-  - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels.
-  - `code` / `math` = zettels with their own paradigms (Batman will specify).
-  - Writing style: avoid full stops at the end of bullet lines (match existing vault style)
+  - Timestamped zettels are used for: `paper | note | code | math`
+  - `paper` = summary of a paper
+  - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels
+  - `code` / `math` = zettels with their own paradigms (Batman will specify)
+  - Assistant output requirements for zettels:
+    - Very concise summary in simple words + a `[!MATH]` block when relevant
+    - Do **not** add highlights (Batman adds highlights during learning)
+    - Do **not** add citation/source links (Batman adds them during learning)
+    - Only ensure the zettel is linked from the relevant MOC; Batman will create additional mappings between zettels
+  - Writing style: avoid full stops at the end of bullet lines
   - Timestamp rule: generate zettel filenames using **Europe/Amsterdam** local time (DST-aware), format `YYYYMMDDHHMM - <title>.md`
     - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
 - MOC: use `008 - templates/node - moc.md`
