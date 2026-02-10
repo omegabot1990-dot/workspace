@@ -67,6 +67,10 @@ Interpretation:
 - `note`: non-math conceptual zettel
 - `paper`: paper zettel sourced from alphaXiv blog (`-t` is the alphaXiv link)
 
+Parent normalization:
+- Always normalize parent names for matching (e.g. singular/plural, minor spelling) when mapping `-p` to an existing note
+- Prefer the closest existing parent note rather than asking
+
 #### Global zettel rules (all kinds)
 
 - Filename timestamp: Europe/Amsterdam local time (DST-aware), `YYYYMMDDHHMM - <topic>.md`
@@ -124,6 +128,7 @@ Interpretation:
   - Input set = major keywords from the paper
     - Prefer paper concepts, methods, datasets, tools, model families, and training algorithms
     - Avoid generic category labels like `cs.AI`, `cs.CL`, `Computer Science`
+    - Use keywords from the paper (do not invent your own topic list)
   - KG presence test = compare against existing zettel topic names only
     - Only count timestamped zettels: filenames like `YYYYMMDDHHMM - <topic>.md`
     - Do not treat MOCs / non-timestamped notes as covering a topic
@@ -148,6 +153,7 @@ Interpretation:
 #### Trusted sources (default)
 
 - Source of truth: `vault/002 - research/trusted sources.md` (`[[trusted sources]]`)
+- Applies to `note` and `math` zettels only
 - Before any `note` or `math` zettel review/creation
   - Pull latest vault
   - Read `[[trusted sources]]` and use it as the only trusted-source allowlist
