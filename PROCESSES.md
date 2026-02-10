@@ -52,17 +52,63 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - Timestamped zettels are used for: `paper | note | code | math`
   - `paper` = summary of a paper
   - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels
-  - `code` / `math` = zettels with their own paradigms (Batman will specify)
-  - Assistant output requirements for zettels:
-    - Very concise summary in simple words
-    - Add a `[!MATH]` block only when there is actual math (definition/formula)
-    - When writing math, use Obsidian LaTeX (inline `$...$`, display `$$...$$`) like existing notes
-    - Do **not** add highlights (Batman adds highlights during learning)
-    - Do **not** add citation/source links (Batman adds them during learning)
-    - Only ensure the zettel is linked from the relevant MOC; Batman will create additional mappings between zettels
-  - Writing style: avoid full stops at the end of bullet lines
-  - Timestamp rule: generate zettel filenames using **Europe/Amsterdam** local time (DST-aware), format `YYYYMMDDHHMM - <title>.md`
-    - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
+  - `code` / `math` = paradigms as specified below
+
+### Zettel workflows (robust spec)
+
+#### Global zettel rules (all kinds)
+
+- Filename timestamp: Europe/Amsterdam local time (DST-aware), `YYYYMMDDHHMM - <topic>.md`
+  - One-liner: `python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('Europe/Amsterdam')).strftime('%Y%m%d%H%M'))"`
+- `title` in frontmatter: lowercase
+- `aliases`: appropriate casing (e.g. Title Case)
+- Writing style: bullet lists, concise, no trailing full stops
+- Do not add highlights or citations
+- Use Obsidian LaTeX for math: inline `$...$`, display `$$...$$`
+- Add a `[!MATH]` callout only when there is actual math (definition/formula)
+
+#### Note + Math zettels
+
+- Research step: web search topic and verify against trusted sources (see list below)
+- Output: very concise summary in simple words, but correct technical jargon
+
+#### Paper zettels (from alphaXiv blog)
+
+- Topic naming:
+  - `title`: paper name in lowercase
+  - Replace `:` with `-`
+  - `aliases`: formatted paper title as used in the alphaXiv blog
+- Source: use alphaXiv blog as the primary source of sections/content and re-verify against the blog/paper content
+- Required sections in this order:
+  - `## Topics (not in KG yet)` (top of note)
+  - `## Summary`
+  - `## Problem`
+  - `## Method`
+  - `## Result`
+  - `## Take Away`
+  - `## Limitations`
+  - `## Future Work`
+- Missing topics handling:
+  - If a topic is not present in KG (exact match against existing zettel topic names), list it under `## Topics (not in KG yet)` as `- [ ] <topic>`
+  - Do not create new zettels for those topics
+- Figures/graphs:
+  - Embed relevant alphaXiv figures/graphs in Obsidian embed style `![](<url>)` similar to the InstructGPT example
+
+#### MOC update rule
+
+- After creating any zettel, update the parent MOC you provided:
+  - If the topic entry exists under the relevant section, convert it to a checked link: `- [x] [[<zettel>|<Alias>]]`
+  - If it is missing, add it under the correct section (`Topics` for concepts, `Papers` for papers) and mark it done
+
+#### Trusted sources (default)
+
+- StatQuest
+- 3Blue1Brown
+- Stanford notes
+- Textbooks
+- arXiv survey papers
+- Emergent Mind
+- D2L
 - MOC: use `008 - templates/node - moc.md`
   - Batman owns/creates MOCs (assistant should not create MOCs)
   - MOC sections (always in this order): `## Topics`, `## Blogs`, `## Papers`, `## Videos`, `## Code`
