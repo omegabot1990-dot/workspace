@@ -45,7 +45,12 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 ## Creating zettels / MOCs
 
 - Zettel: use `008 - templates/node - zettel.md`
+  - Timestamped zettels are used for: `paper | note | code | math`.
+  - `paper` = summary of a paper.
+  - `note` = leaf/atomic concept node (e.g. objective function) with a parent (zettel or MOC) and linked content to other zettels.
+  - `code` / `math` = zettels with their own paradigms (Batman will specify).
 - MOC: use `008 - templates/node - moc.md`
+  - High-level concept map that mainly links to zettels; minimal/no content.
 - Graph invariant: every new MOC/Zettel must link to a **parent** MOC or Zettel.
 - Root parent: `[[research.base]]` is the root parent for the research graph.
 
