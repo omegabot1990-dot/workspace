@@ -56,6 +56,7 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - Assistant output requirements for zettels:
     - Very concise summary in simple words
     - Add a `[!MATH]` block only when there is actual math (definition/formula)
+    - When writing math, use Obsidian LaTeX (inline `$...$`, display `$$...$$`) like existing notes
     - Do **not** add highlights (Batman adds highlights during learning)
     - Do **not** add citation/source links (Batman adds them during learning)
     - Only ensure the zettel is linked from the relevant MOC; Batman will create additional mappings between zettels
