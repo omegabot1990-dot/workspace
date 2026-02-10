@@ -77,7 +77,8 @@ When adding a highlighted item, include a short action label in-angle-brackets n
 - Topic naming:
   - `title`: paper name in lowercase
   - Replace `:` with `-`
-  - `aliases`: formatted paper title as used in the alphaXiv blog
+  - `aliases`: exactly the alphaXiv blog header text (verbatim casing)
+- alphaXiv link: Batman provides the alphaXiv URL
 - Source: use alphaXiv blog as the primary source of sections/content and re-verify against the blog/paper content
 - Required sections in this order:
   - `## Topics (not in KG yet)` (top of note)
@@ -89,7 +90,9 @@ When adding a highlighted item, include a short action label in-angle-brackets n
   - `## Limitations`
   - `## Future Work`
 - Missing topics handling:
-  - If a topic is not present in KG (exact match against existing zettel topic names), list it under `## Topics (not in KG yet)` as `- [ ] <topic>`
+  - Determine whether a topic is in KG by comparing against existing zettel topic names using normalization (casefold + strip + collapse whitespace + normalize `:`→`-`)
+  - If unsure, include it in the missing-topics list
+  - If a topic is not present in KG, list it under `## Topics (not in KG yet)` as `- [ ] <topic>`
   - Do not create new zettels for those topics
 - Figures/graphs:
   - Embed relevant alphaXiv figures/graphs in Obsidian embed style `![](<url>)` similar to the InstructGPT example
