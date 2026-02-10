@@ -109,8 +109,11 @@ Interpretation:
   - `## Take Away`
   - `## Limitations`
   - `## Future Work`
+- Published date:
+  - Include `published on: YYYY-MM-DD` in frontmatter
+  - Use arXiv API `<published>` for the arXiv id (not the alphaXiv page date)
 - Missing topics handling:
-  - Determine whether a topic is in KG by comparing against existing zettel topic names using normalization (casefold + strip + collapse whitespace + normalize `:`→`-`)
+  - Determine whether a topic is in KG by comparing against existing KG note titles (include MOCs and zettels) using normalization (casefold + strip + collapse whitespace + normalize `:`→`-`)
   - If unsure, include it in the missing-topics list
   - If a topic is not present in KG, list it under `## Topics (not in KG yet)` as `- [ ] <topic>`
   - Do not create new zettels for those topics
