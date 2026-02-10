@@ -83,7 +83,15 @@ Interpretation:
 #### Note zettels
 
 - Use when the topic is not primarily mathematical
-- Research step: web search topic and verify against trusted sources (see list below)
+- Frontmatter
+  - Must include `title: <lowercase>`
+  - `aliases`: appropriate casing
+  - `bot: true` when assistant-created
+- Body format
+  - Follow math zettel style: bullets directly after frontmatter
+  - Do not add an H1 title line
+  - No trailing full stops in bullets
+- Research step: verify against trusted sources (see list below)
 - Output: very concise summary in simple words, but correct technical jargon
 
 #### Math zettels
