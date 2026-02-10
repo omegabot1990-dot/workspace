@@ -112,12 +112,22 @@ Interpretation:
 - Published date:
   - Include `published on: YYYY-MM-DD` in frontmatter
   - Use arXiv API `<published>` for the arXiv id (not the alphaXiv page date)
-- Missing topics handling:
-  - Determine whether a topic is in KG by comparing against existing zettel topic names (timestamped zettels only) using normalization (casefold + strip + collapse whitespace + normalize `:`→`-`)
-  - Topics come from major keywords seen in the paper
-  - If unsure, include it in the missing-topics list
-  - If a topic is not present in KG, list it under `## Topics (not in KG yet)` as `- [ ] <topic>`
-  - Do not create new zettels for those topics
+- Missing topics handling (`## Topics (not in KG yet)`)
+  - Input set = major keywords from the paper
+    - Prefer paper concepts, methods, datasets, tools, model families, and training algorithms
+    - Avoid generic category labels like `cs.AI`, `cs.CL`, `Computer Science`
+  - KG presence test = compare against existing zettel topic names only
+    - Only count timestamped zettels: filenames like `YYYYMMDDHHMM - <topic>.md`
+    - Do not treat MOCs / non-timestamped notes as covering a topic
+  - Normalization for matching
+    - casefold
+    - strip
+    - collapse whitespace
+    - normalize punctuation: `:`→`-`
+    - treat hyphen and space as equivalent for matching (e.g. `reinforcement-learning` ≈ `reinforcement learning`)
+  - If a keyword does not match any existing zettel topic, list it under `## Topics (not in KG yet)` as `- [ ] <keyword>`
+  - If unsure, include it
+  - Do not create new zettels for the missing-topics list
 - Figures/graphs:
   - Embed relevant alphaXiv figures/graphs in Obsidian embed style `![](<url>)` similar to the InstructGPT example
 
